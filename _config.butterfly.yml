@@ -328,7 +328,7 @@ valine:
   #评论系统的背景
   bg: # valine background
   #是否允许游客评论
-  visitor: false
+  visitor: true
   #评论区显示的文字
   placeholder: 留下你的足迹o(*￣▽￣*)ブ
   #每一页最大的评论数量
