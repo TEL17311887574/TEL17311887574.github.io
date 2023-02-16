@@ -108,3 +108,10 @@ deploy:
   type: git
   repository: https://github.com/TEL17311887574/TEL17311887574.github.io.git
   branch: main
+
+# 搜索功能
+search:
+  path: search.xml
+  field: all # post:文章范围、page:页面范围、all:覆盖所有
+  content: true # 内容是否包含每一篇文章的全部内容
+  template:  # ./search.xml 指定定制的XML模板
