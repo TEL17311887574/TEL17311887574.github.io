@@ -281,12 +281,16 @@ addtoany:
 # --------------------------------------
 
 comments:
-  use: Valine #,Disqus # 可实现单评论、双评论(最多两个)
-  text: true # 是否显示评论服务商的名字
-  lazyload: true # 是否为评论开启lazyload，开启后，只有滚动到评论位置时才会加载评论所需要的资源（开启lazyload后，评论数将不显示）
-  count: true # 是否在文章顶部显示评论数，livere、Giscus 和 utterances 不支持评论数显示
-  card_post_count: false # 是否在首页文章卡片显示评论数，gitalk、livere 、Giscus 和 utterances 不支持评论数显示
-
+  # Up to two comments system, the first will be shown as default
+  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
+  use: # Valine,Disqus
+  text: true # Display the comment name next to the button
+  # lazyload: The comment system will be load when comment element enters the browser's viewport.
+  # If you set it to true, the comment count will be invalid
+  lazyload: false
+  count: false # Display comment count in post's top_img
+  card_post_count: false # Display comment count in Home Page
+  
 # disqus
 # https://disqus.com/
 disqus:
@@ -319,20 +323,12 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: KupUCDolrCfECaZ9X0usUkZA-MdYXbMMI
-  appKey: 4pSg7OKouoPpheohRIyBCZeN
-  #查询下面的网站，选择评论的适合出现的图像 https://valine.js.org/#/avatar
-  avatar: monsterid # gravatar style 
-  #你的对应的服务器的地址，就在appid那一页的下面
+  appId: # leancloud application app id
+  appKey: # leancloud application app key
+  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  #评论系统的背景
   bg: # valine background
-  #是否允许游客评论
   visitor: false
-  #评论区显示的文字
-  placeholder: 留下你的足迹o(*￣▽￣*)ブ
-  #每一页最大的评论数量
-  pageSize: 15
   option:
   
 
